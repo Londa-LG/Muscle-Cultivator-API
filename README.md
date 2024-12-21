@@ -1,0 +1,21 @@
+- [ ] routers
+    - [ ] achievements
+    - [ ] exercises
+    - [ ] ratings
+    - [ ] users
+    - [ ] workouts
+    - [ ] progress
+- [ ] schema
+    - [x] achievements
+    - [x] progress
+    - [x] exercises
+    - [x] ratings
+    - [x] users
+    - [x] workouts
+- [ ] models
+    - [ ] achievements
+    - [ ] exercises
+    - [ ] ratings
+    - [ ] users
+    - [ ] workouts
+    - [ ] progress
