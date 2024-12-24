@@ -1,5 +1,6 @@
 from fastapi import Depends,HTTPException,APIRouter
 from schema import Workout
+from models import Workout_Model
 
 router = APIRouter(
     tags = ["Workout end-points"],
@@ -11,11 +12,12 @@ def create_workout(data: Workout):
     pass
 
 @router.get("/",response_model=Workout)
-def get_posts():
-    pass
+def get_workouts():
+    db = Workout_Model()
+    return db.read_all()
 
 @router.get("/{id}",response_model=Workout)
-def get_post(id: int):
+def get_workout(id: int):
     pass
 
 @router.put("/{id}",response_model=Workout)

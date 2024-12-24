@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from models import Model
 from routers import users,workouts,exercises,achievements,ratings
 
-model = Model("app.db")
+#model = Model("app.db")
 
 app = FastAPI()
 
