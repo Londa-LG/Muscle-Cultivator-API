@@ -1,10 +1,11 @@
+from models import Base
+from connect import engine
 from fastapi import FastAPI
-from models import Model
 from routers import users,workouts,exercises,achievements,ratings
 
-#model = Model("app.db")
-
 app = FastAPI()
+
+Base.metadata.create_all(bind=engine)
 
 app.include_router(users.router)
 app.include_router(workouts.router)
