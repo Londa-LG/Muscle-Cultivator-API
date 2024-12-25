@@ -5,7 +5,7 @@ class Base(DeclarativeBase):
 
 class Workout_Model(Base):
     __tablename__ = "workouts"
-    id: Mapped[int] = mapped_column(primary_key=True, unique=True)
+    id: Mapped[int] = mapped_column(autoincrement=True,primary_key=True, unique=True)
     slug: Mapped[str] = mapped_column(nullable=False)
     exercises: Mapped[str] = mapped_column(nullable=False)
     type: Mapped[str] = mapped_column(nullable=False)

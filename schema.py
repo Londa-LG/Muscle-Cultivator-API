@@ -9,7 +9,6 @@ class TokenData(BaseModel):
     id: Optional[int]
 
 class Workout(BaseModel):
-    id: int
     slug: str
     type: str
     exercises: List[str]
@@ -20,11 +19,17 @@ class Workout(BaseModel):
     day: str
     date: str
 
+class Workout_Response(Workout):
+    id: int
+
 class Exercise(BaseModel):
     id: int
     slug: str
     name: str
     technique: str
+
+class Exercise_Response(Exercise):
+    id: int
 
 class User(BaseModel):
     id: int
@@ -34,6 +39,9 @@ class User(BaseModel):
     workouts: List[int]
     awards: List[int]
 
+class User_Response(User):
+    id: int
+
 class Rating(BaseModel):
     id: int
     level: int
@@ -41,11 +49,17 @@ class Rating(BaseModel):
     exercise: str
     details: str
 
+class Rating_Response(Rating):
+    id: int
+
 class Progress(BaseModel):
     id: int
     slug: str
     user: int
     workouts: List[int]
+
+class Progress_Response(Progress):
+    id: int
 
 class Achievement(BaseModel):
     id: int
@@ -54,3 +68,5 @@ class Achievement(BaseModel):
     details: str
     requirements: Dict[str,str]
 
+class Achievement_Response(Achievement):
+    id: int

@@ -1,21 +1,32 @@
+- [x] Util methods
+    - [x] List to string converter
+    - [x] String to list converter
+    - [x] Dict to string converter
+    - [x] String to dict converter
 - [ ] routers
     - [ ] achievements
     - [ ] exercises
     - [ ] ratings
     - [ ] users
-    - [ ] workouts
+    - [x] workouts
     - [ ] progress
-- [ ] schema
+- [x] schema
     - [x] achievements
+    - [x] achievements Response
     - [x] progress
+    - [x] progress Response
+    - [x] exercises
+    - [x] exercises Response
+    - [x] ratings
+    - [x] ratings Response
+    - [x] users
+    - [x] users Response
+    - [x] workouts
+    - [x] workouts Response
+- [x] models
+    - [x] achievements
     - [x] exercises
     - [x] ratings
     - [x] users
     - [x] workouts
-- [ ] models
-    - [ ] achievements
-    - [ ] exercises
-    - [ ] ratings
-    - [ ] users
-    - [ ] workouts
-    - [ ] progress
+    - [x] progress
