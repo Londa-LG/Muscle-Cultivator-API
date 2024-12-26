@@ -23,7 +23,6 @@ class Workout_Response(Workout):
     id: int
 
 class Exercise(BaseModel):
-    id: int
     slug: str
     name: str
     technique: str
@@ -32,7 +31,6 @@ class Exercise_Response(Exercise):
     id: int
 
 class User(BaseModel):
-    id: int
     email: EmailStr
     username: str
     password: str
@@ -43,7 +41,6 @@ class User_Response(User):
     id: int
 
 class Rating(BaseModel):
-    id: int
     level: int
     requirements: Dict[str,str]
     exercise: str
@@ -53,7 +50,6 @@ class Rating_Response(Rating):
     id: int
 
 class Progress(BaseModel):
-    id: int
     slug: str
     user: int
     workouts: List[int]
@@ -62,7 +58,6 @@ class Progress_Response(Progress):
     id: int
 
 class Achievement(BaseModel):
-    id: int
     slug: str
     name: str
     details: str

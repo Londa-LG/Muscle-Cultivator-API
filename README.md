@@ -5,9 +5,9 @@
     - [x] String to dict converter
 - [ ] routers
     - [ ] achievements
-    - [ ] exercises
-    - [ ] ratings
-    - [ ] users
+    - [x] exercises
+    - [x] ratings
+    - [x] users
     - [x] workouts
     - [ ] progress
 - [x] schema

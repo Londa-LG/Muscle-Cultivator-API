@@ -28,7 +28,7 @@ def create_access_token(data: dict):
 def list_to_string(data):
     str_list = ""
     for item in data:
-        str_list = str_list + item + ","
+        str_list = str_list + str(item) + ","
     
     return str_list
 

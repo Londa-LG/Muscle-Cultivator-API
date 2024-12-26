@@ -11,9 +11,8 @@ router = APIRouter(
     prefix = "/workouts"
 )
 
-@router.post("/", response_model=Workout)
+@router.post("/", response_model=Workout_Response)
 def create_workout(data: Workout,db: Session = Depends(get_db)):
-    original = data
     data.exercises = list_to_string(data.exercises)
     data.reps = dict_to_string(data.reps)
     data.sets = dict_to_string(data.sets)
@@ -23,7 +22,11 @@ def create_workout(data: Workout,db: Session = Depends(get_db)):
     db.commit()
     db.refresh(new_workout)
 
-    return original
+    new_workout.exercises = string_to_list(new_workout.exercises)
+    new_workout.reps = string_to_dict(new_workout.reps)
+    new_workout.sets = string_to_dict(new_workout.sets)
+
+    return new_workout
 
 @router.get("/", response_model=List[Workout_Response])
 def get_workouts(db: Session = Depends(get_db)):
@@ -38,7 +41,6 @@ def get_workouts(db: Session = Depends(get_db)):
         workout.sets = string_to_dict(workout.sets)
 
     return workouts
-    
 
 @router.get("/{id}",response_model=Workout_Response)
 def get_workout(id: int,db: Session = Depends(get_db)):
