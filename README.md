@@ -3,13 +3,13 @@
     - [x] String to list converter
     - [x] Dict to string converter
     - [x] String to dict converter
-- [ ] routers
-    - [ ] achievements
+- [x] routers
+    - [x] achievements
     - [x] exercises
     - [x] ratings
     - [x] users
     - [x] workouts
-    - [ ] progress
+    - [x] progress
 - [x] schema
     - [x] achievements
     - [x] achievements Response

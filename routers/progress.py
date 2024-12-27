@@ -36,7 +36,7 @@ def get_progress(db: Session = Depends(get_db)):
 
     return progress
 
-@router.get("/{id}", response_model=Progress)
+@router.get("/{id}", response_model=Progress_Response)
 def get_progress(id: int,db: Session = Depends(get_db)):
     progress = db.query(Progress_Model).filter(Progress_Model.id == id).first()
 
@@ -47,7 +47,7 @@ def get_progress(id: int,db: Session = Depends(get_db)):
 
     return progress
 
-@router.put("/{id}", response_model=Progress)
+@router.put("/{id}", response_model=Progress_Response)
 def update_progress(id: int,data: Progress,db: Session = Depends(get_db)):
     progress = db.query(Progress_Model).filter(Progress_Model.id == id)
 
@@ -65,7 +65,7 @@ def update_progress(id: int,data: Progress,db: Session = Depends(get_db)):
     return progress
 
 
-@router.delete("/{id}", response_model=Progress)
+@router.delete("/{id}")
 def delete_progress(id: int,db: Session = Depends(get_db)):
     progress = db.query(Progress_Model).filter(Progress_Model.id == id)
 
